@@ -485,16 +485,38 @@ def createNet8(epoch=200):
 
     return NET_256_4x4_32_32_v2
 
+def get_net(net_id):
+    if net_id == 0:
+        return createNet0();
+    elif net_id == 1:
+        return createNet1();
+    elif net_id == 2:
+        return createNet2();
+    elif net_id == 3:
+        return createNet3();
+    elif net_id == 4:
+        return createNet4();
+    elif net_id == 5:
+        return createNet5();
+    elif net_id == 6:
+        return createNet6();
+    elif net_id == 7:
+        return createNet7();
+    elif net_id == 8:
+        return createNet8();
+
 
 # DO NOT CHANGE THE ORDERING OF THESE NETWORKS
-NETWORKS = {
-    0: createNet0(),
-    1: createNet1(),
-    2: createNet2(),
-    3: createNet3(),
-    4: createNet4(),
-    5: createNet5(),
-    6: createNet6(),
-    7: createNet7(),
-    8: createNet8(),
-}
+
+
+# NETWORKS = {
+#     0: createNet0(),
+#     1: createNet1(),
+#     2: createNet2(),
+#     3: createNet3(),
+#     4: createNet4(),
+#     5: createNet5(),
+#     6: createNet6(),
+#     7: createNet7(),
+#     8: createNet8(),
+# }

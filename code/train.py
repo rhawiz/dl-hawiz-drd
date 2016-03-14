@@ -7,6 +7,7 @@ import data
 import cPickle
 import numpy as np
 from load_net import load_net
+from net_configs import get_net
 
 DEFAULT_TRAINING_DATA = os.path.relpath('../data/diabetic_ret/dataset_256/')
 DEFAULT_LABELS = os.path.relpath('../data/diabetic_ret/trainLabels.csv')
@@ -24,7 +25,7 @@ def train(limit=-1, net_id=0, train_dir=DEFAULT_TRAINING_DATA, labels_dir=DEFAUL
     print "{}\tLoading {} images in {}".format(now(), limit, train_dir)
     files, labels = data.load_data(train_dir, labels_dir, verbose=0, limit=limit, size=size)
 
-    net = net_configs.NETWORKS.get(net_id, None)
+    net = get_net(net_id)
     if not net:
         print '{}\tNo network with id {}'.format(now(), net_id)
         return
