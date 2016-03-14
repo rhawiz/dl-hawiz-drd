@@ -1,0 +1,2 @@
+python code/convert.py -i ../data/diabetic_ret/train/ -o ../data/diabetic_ret/train_256_norm/ -s 256 -c -d -ow
+python code/convert.py -i ../data/diabetic_ret/train_partitions/_train_001/ -o ../data/diabetic_ret/dataset_512_norm/train/ -s 512 -c
